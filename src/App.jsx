@@ -44,7 +44,8 @@ import {
     ShoppingCatalog,
     User,
  
-    UserAccess
+    UserAccess,
+    IbmTurbonomic
   } from '@carbon/icons-react';
 
 const StoryContent = () => (
@@ -139,7 +140,6 @@ function App() {
                   isCollapsible //shows hamburger menu at desktop
                   isFixedNav
                 />
-
                 <HeaderName href="#" prefix="IBM">Automation Hub</HeaderName>
               </Header>
             
@@ -152,26 +152,60 @@ function App() {
                 hideOverlay
                 className="nav--global">
                 
+                {/* Global menu */}
                 <SideNavItems>
+                  {/* Instana */}
+                  <SideNavMenu renderIcon={IbmInstana}title="Instana">
+                    <SideNavMenuItem renderIcon={HomeIcon} href="#">Home</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Websites & applications</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Business monitoring</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Applications</SideNavMenuItem>
+                    <SideNavMenu renderIcon={SquareOutline} title="Platform">
+                      <SideNavMenuItem href="#">Cloud Foundry</SideNavMenuItem>
+                      <SideNavMenuItem href="#">IBM Z HCM</SideNavMenuItem>
+                      <SideNavMenuItem href="#">Kubernetes</SideNavMenuItem>
+                    </SideNavMenu> 
+                    <SideNavMenuItem renderIcon={SquareOutline} href="#"></SideNavMenuItem>
+
+                  {/* Divider */}
+                  <SideNavDivider />
+
+                  <SideNavMenuItem renderIcon={SquareOutline} href="#">Custom dashboards</SideNavMenuItem>
+                  <SideNavMenuItem renderIcon={SquareOutline} href="#">Logs</SideNavMenuItem>
+                  <SideNavMenuItem renderIcon={SquareOutline} href="#">Synthetic monitoring</SideNavMenuItem>
+                  <SideNavMenuItem renderIcon={SquareOutline} href="#">Analytics</SideNavMenuItem>
+                  <SideNavMenuItem renderIcon={SquareOutline} href="#">Vulnerabilities</SideNavMenuItem>
+                  <SideNavMenuItem renderIcon={SquareOutline} href="#">Events</SideNavMenuItem>
+                  <SideNavMenuItem renderIcon={SquareOutline} href="#">Monitoring</SideNavMenuItem>
+                  <SideNavMenuItem renderIcon={SquareOutline} href="#">Service levels</SideNavMenuItem>
+
+                  {/* Divider */}
+                  <SideNavDivider />
+
+                  <SideNavMenuItem renderIcon={SquareOutline} href="#">Settings</SideNavMenuItem>
+                  <SideNavMenuItem renderIcon={SquareOutline} href="#">More</SideNavMenuItem>
+
+                  </SideNavMenu>
                   
-                  <SideNavMenu
-                    renderIcon={IbmInstana}
-                    title="Instana">
-                    
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Item level 2</SideNavMenuItem>
-                    
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Item level 2</SideNavMenuItem>
-                    
-                    <SideNavMenu renderIcon={SquareOutline} title="Sub-menu level 2">
-                      <SideNavMenuItem href="#">Item level 3</SideNavMenuItem>
-                      <SideNavMenuItem href="#">Item level 3</SideNavMenuItem>
-                      <SideNavMenuItem href="#">Item level 3</SideNavMenuItem>
-                    </SideNavMenu>
-                    
+                  {/* Turbonomic */}
+                  <SideNavMenu renderIcon={IbmTurbonomic} title="Turbonomic">
+                    <SideNavMenuItem renderIcon={HomeIcon} href="#">Home</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Item</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Item</SideNavMenuItem>
                   </SideNavMenu>
-                  <SideNavMenu renderIcon={SquareOutline} title="Sub-menu">
-                    <SideNavMenuItem href="#">Item</SideNavMenuItem>
+
+                  {/* Concert */}
+                  <SideNavMenu renderIcon={IbmTurbonomic} title="Concert">
+                    <SideNavMenuItem renderIcon={HomeIcon} href="#">Home</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Arena view</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Dimensions</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Workflow</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Administration</SideNavMenuItem>
                   </SideNavMenu>
+
+                  {/* Divider */}
+                  <SideNavDivider />
+                  
                   <SideNavMenu renderIcon={SquareOutline} title="Sub-menu">
                     <SideNavMenuItem href="#">Item</SideNavMenuItem>
                   </SideNavMenu>
@@ -188,6 +222,7 @@ function App() {
                   <SideNavLink renderIcon={SquareOutline} href="#">
                     Link
                   </SideNavLink>
+                  
                   <SideNavMenu renderIcon={SquareOutline} title="Sub-menu">
                     <SideNavMenuItem href="#">My Item</SideNavMenuItem>
                     <SideNavMenuItem href="#">Item</SideNavMenuItem>
