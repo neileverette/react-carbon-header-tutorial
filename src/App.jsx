@@ -47,7 +47,6 @@ import {
     UserAccess
   } from '@carbon/icons-react';
 
-
 const StoryContent = () => (
   <Theme as={Content} theme="g10">
     <Grid align="start">
@@ -131,6 +130,7 @@ function App() {
             <Theme theme="g100">
               <Header aria-label="IBM Platform Name">
                 <SkipToContent />
+                
                 <HeaderMenuButton
                   aria-label={isSideNavExpanded ? 'Close menu' : 'Open menu'}
                   onClick={onClickSideNavExpand}
@@ -139,12 +139,10 @@ function App() {
                   isCollapsible //shows hamburger menu at desktop
                   isFixedNav
                 />
-                <HeaderName href="#" prefix="IBM">
-                  Automation Hub
-                </HeaderName>
+
+                <HeaderName href="#" prefix="IBM">Automation Hub</HeaderName>
               </Header>
             
-            // Global nav
               <SideNav
                 aria-label="Side navigation1"
                 expanded={isSideNavExpanded}
@@ -160,17 +158,11 @@ function App() {
                     renderIcon={IbmInstana}
                     title="Instana">
                     
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#">
-                      Item level 2
-                    </SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Item level 2</SideNavMenuItem>
                     
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#">
-                      Item level 2
-                    </SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Item level 2</SideNavMenuItem>
                     
-                    <SideNavMenu
-                      renderIcon={SquareOutline}
-                      title="Sub-menu level 2">
+                    <SideNavMenu renderIcon={SquareOutline} title="Sub-menu level 2">
                       <SideNavMenuItem href="#">Item level 3</SideNavMenuItem>
                       <SideNavMenuItem href="#">Item level 3</SideNavMenuItem>
                       <SideNavMenuItem href="#">Item level 3</SideNavMenuItem>
@@ -205,7 +197,7 @@ function App() {
               </SideNav>
             </Theme>
 
-            // Toolbar
+            {/* Toolbar */}
             <Theme theme="g100">
               <SideNav
                 navType={SIDE_NAV_TYPE.PANEL}
@@ -214,11 +206,7 @@ function App() {
                 aria-label="Side navigation">
                 <SideNavItems>
                 
-                // Home
-                <SideNavLink renderIcon={HomeIcon} href="#">
-                    
-                    Home
-                  </SideNavLink>
+                <SideNavLink renderIcon={HomeIcon} href="#">Home</SideNavLink>
 
                   // Data apps
                   <SideNavMenu renderIcon={ChartMarimekko} title="Data apps">
