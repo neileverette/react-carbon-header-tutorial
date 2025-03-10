@@ -29,16 +29,19 @@ import {
   SideNavDivider,
 } from '@carbon/react';
 import { 
-    UserAccess, 
-    Platforms, 
+    
     CloudMonitoring, 
     Fade,
     Pipelines, 
     SquareOutline, 
-    Home as HomeIcon, 
+    Home as HomeIcon,
+    IbmInstana,
+    Flow,
+    ChartMarimekko,
     Dashboard, 
+    Settings,
     User, 
-    Settings 
+    UserAccess
   } from '@carbon/icons-react';
 
 
@@ -137,6 +140,8 @@ function App() {
                   Automation Hub
                 </HeaderName>
               </Header>
+            
+            // Global nav
               <SideNav
                 aria-label="Side navigation1"
                 expanded={isSideNavExpanded}
@@ -145,16 +150,21 @@ function App() {
                 isTreeview
                 hideOverlay
                 className="nav--global">
+                
                 <SideNavItems>
+                  
                   <SideNavMenu
-                    renderIcon={SquareOutline}
-                    title="Sub-menu level 1">
+                    renderIcon={IbmInstana}
+                    title="Instana">
+                    
                     <SideNavMenuItem renderIcon={SquareOutline} href="#">
                       Item level 2
                     </SideNavMenuItem>
+                    
                     <SideNavMenuItem renderIcon={SquareOutline} href="#">
                       Item level 2
                     </SideNavMenuItem>
+                    
                     <SideNavMenu
                       renderIcon={SquareOutline}
                       title="Sub-menu level 2">
@@ -162,6 +172,7 @@ function App() {
                       <SideNavMenuItem href="#">Item level 3</SideNavMenuItem>
                       <SideNavMenuItem href="#">Item level 3</SideNavMenuItem>
                     </SideNavMenu>
+                    
                   </SideNavMenu>
                   <SideNavMenu renderIcon={SquareOutline} title="Sub-menu">
                     <SideNavMenuItem href="#">Item</SideNavMenuItem>
@@ -190,6 +201,8 @@ function App() {
                 </SideNavItems>
               </SideNav>
             </Theme>
+
+            // Toolbar
             <Theme theme="g100">
               <SideNav
                 navType={SIDE_NAV_TYPE.PANEL}
@@ -197,18 +210,28 @@ function App() {
                 hideOverlay
                 aria-label="Side navigation">
                 <SideNavItems>
-
+                
+                // Home
                 <SideNavLink renderIcon={HomeIcon} href="#">
+                    
                     Home
                   </SideNavLink>
 
-                  <SideNavMenu renderIcon={Pipelines} title="Workflows ">
+                  // Data apps
+                  <SideNavMenu renderIcon={ChartMarimekko} title="Data apps">
+                    <SideNavMenuItem href="#">Apps</SideNavMenuItem>
+                    <SideNavMenuItem href="#">App editor</SideNavMenuItem>
+                  </SideNavMenu>
+
+                // Workflow
+                  <SideNavMenu renderIcon={Flow} title="Workflows ">
                     <SideNavMenuItem href="#">Workflow </SideNavMenuItem>
                     <SideNavMenuItem href="#">Workflow editor</SideNavMenuItem>
                     <SideNavMenuItem href="#">Schedules</SideNavMenuItem>
                     <SideNavMenuItem href="#">Jobs</SideNavMenuItem>
                   </SideNavMenu>
 
+                  // IAM
                   <SideNavMenu renderIcon={UserAccess} title="User & access management">
                     <SideNavMenuItem href="#">Users</SideNavMenuItem>
                     <SideNavMenuItem href="#">Groups</SideNavMenuItem>
@@ -216,20 +239,19 @@ function App() {
                     <SideNavMenuItem href="#">Resource groups</SideNavMenuItem>
                   </SideNavMenu>
 
-                 
+                  // Community
+                  <SideNavMenu renderIcon={UserAccess} title="User & access management">
+                    <SideNavMenuItem href="#">Users</SideNavMenuItem>
+                    <SideNavMenuItem href="#">Groups</SideNavMenuItem>
+                    <SideNavMenuItem href="#">Roles</SideNavMenuItem>
+                    <SideNavMenuItem href="#">Resource groups</SideNavMenuItem>
+                  </SideNavMenu>
+
+                 // Software catalog
                   <SideNavLink renderIcon={Fade} href="#">
-                    Link
+                    Software catalog
                   </SideNavLink>
-                  <SideNavLink renderIcon={Fade} href="#">
-                    Link
-                  </SideNavLink>
-                  <SideNavDivider />
-                  <SideNavLink renderIcon={Fade} href="#">
-                    Link
-                  </SideNavLink>
-                  <SideNavLink renderIcon={Fade} href="#">
-                    Link
-                  </SideNavLink>
+
                 </SideNavItems>
               </SideNav>
             </Theme>
