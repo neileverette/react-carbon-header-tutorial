@@ -30,7 +30,8 @@ import {
 } from '@carbon/react';
 import { 
     
-    CloudMonitoring, 
+    CloudMonitoring,
+    Events, 
     Fade,
     Pipelines, 
     SquareOutline, 
@@ -40,7 +41,9 @@ import {
     ChartMarimekko,
     Dashboard, 
     Settings,
-    User, 
+    ShoppingCatalog,
+    User,
+ 
     UserAccess
   } from '@carbon/icons-react';
 
@@ -225,7 +228,7 @@ function App() {
 
                 // Workflow
                   <SideNavMenu renderIcon={Flow} title="Workflows ">
-                    <SideNavMenuItem href="#">Workflow </SideNavMenuItem>
+                    <SideNavMenuItem href="#">Workflow catalog</SideNavMenuItem>
                     <SideNavMenuItem href="#">Workflow editor</SideNavMenuItem>
                     <SideNavMenuItem href="#">Schedules</SideNavMenuItem>
                     <SideNavMenuItem href="#">Jobs</SideNavMenuItem>
@@ -240,15 +243,17 @@ function App() {
                   </SideNavMenu>
 
                   // Community
-                  <SideNavMenu renderIcon={UserAccess} title="User & access management">
-                    <SideNavMenuItem href="#">Users</SideNavMenuItem>
-                    <SideNavMenuItem href="#">Groups</SideNavMenuItem>
-                    <SideNavMenuItem href="#">Roles</SideNavMenuItem>
-                    <SideNavMenuItem href="#">Resource groups</SideNavMenuItem>
+                  <SideNavMenu renderIcon={Events} title="Community">
+                    <SideNavMenuItem href="#">Community home</SideNavMenuItem>
+                    <SideNavMenuItem href="#">My profile</SideNavMenuItem>
+                    <SideNavMenuItem href="#">Instana Community</SideNavMenuItem>
+                    <SideNavMenuItem href="#">Turbonomic Community</SideNavMenuItem>
+                    <SideNavMenuItem href="#">Concert Community</SideNavMenuItem>
+                    <SideNavMenuItem href="#">Submit an idea</SideNavMenuItem>
                   </SideNavMenu>
 
                  // Software catalog
-                  <SideNavLink renderIcon={Fade} href="#">
+                  <SideNavLink renderIcon={ShoppingCatalog} href="#">
                     Software catalog
                   </SideNavLink>
 
