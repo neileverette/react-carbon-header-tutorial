@@ -29,23 +29,32 @@ import {
   SideNavDivider,
 } from '@carbon/react';
 import { 
-    
+    Application,
+    ChartMarimekko,
+    CloudLogging, 
     CloudMonitoring,
+    Dashboard,
+    DevicesApps,
     Events, 
+    EventIncident,
     Fade,
-    Pipelines, 
-    SquareOutline, 
+    Flow,
     Home as HomeIcon,
     IbmInstana,
-    Flow,
-    ChartMarimekko,
-    Dashboard, 
+    IbmTurbonomic,
+    IbmWatsonDiscovery,
+    InfrastructureClassic,
+    Layers,
+    Platforms,
+    Security,
+    ServiceLevels,
     Settings,
     ShoppingCatalog,
+    SquareOutline,
     User,
- 
     UserAccess,
-    IbmTurbonomic
+    WorkflowAutomation
+  
   } from '@carbon/icons-react';
 
 const StoryContent = () => (
@@ -154,30 +163,31 @@ function App() {
                 
                 {/* Global menu */}
                 <SideNavItems>
+                  
                   {/* Instana */}
                   <SideNavMenu renderIcon={IbmInstana}title="Instana">
                     <SideNavMenuItem renderIcon={HomeIcon} href="#">Home</SideNavMenuItem>
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Websites & applications</SideNavMenuItem>
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Business monitoring</SideNavMenuItem>
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Applications</SideNavMenuItem>
-                    <SideNavMenu renderIcon={SquareOutline} title="Platform">
+                    <SideNavMenuItem renderIcon={DevicesApps} href="#">Websites & applications</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={CloudMonitoring} href="#">Business monitoring</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={Application} href="#">Applications</SideNavMenuItem>
+                    <SideNavMenu renderIcon={Platforms} title="Platform">
                       <SideNavMenuItem href="#">Cloud Foundry</SideNavMenuItem>
                       <SideNavMenuItem href="#">IBM Z HCM</SideNavMenuItem>
                       <SideNavMenuItem href="#">Kubernetes</SideNavMenuItem>
                     </SideNavMenu> 
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#"></SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={Layers} href="#">Infrastructure</SideNavMenuItem>
 
                   {/* Divider */}
                   <SideNavDivider />
 
-                  <SideNavMenuItem renderIcon={SquareOutline} href="#">Custom dashboards</SideNavMenuItem>
-                  <SideNavMenuItem renderIcon={SquareOutline} href="#">Logs</SideNavMenuItem>
-                  <SideNavMenuItem renderIcon={SquareOutline} href="#">Synthetic monitoring</SideNavMenuItem>
-                  <SideNavMenuItem renderIcon={SquareOutline} href="#">Analytics</SideNavMenuItem>
-                  <SideNavMenuItem renderIcon={SquareOutline} href="#">Vulnerabilities</SideNavMenuItem>
-                  <SideNavMenuItem renderIcon={SquareOutline} href="#">Events</SideNavMenuItem>
-                  <SideNavMenuItem renderIcon={SquareOutline} href="#">Monitoring</SideNavMenuItem>
-                  <SideNavMenuItem renderIcon={SquareOutline} href="#">Service levels</SideNavMenuItem>
+                  <SideNavMenuItem renderIcon={Dashboard} href="#">Custom dashboards</SideNavMenuItem>
+                  <SideNavMenuItem renderIcon={CloudLogging} href="#">Logs</SideNavMenuItem>
+                  <SideNavMenuItem renderIcon={CloudMonitoring} href="#">Synthetic monitoring</SideNavMenuItem>
+                  <SideNavMenuItem renderIcon={IbmWatsonDiscovery} href="#">Analytics</SideNavMenuItem>
+                  <SideNavMenuItem renderIcon={Security} href="#">Vulnerabilities</SideNavMenuItem>
+                  <SideNavMenuItem renderIcon={EventIncident} href="#">Events</SideNavMenuItem>
+                  <SideNavMenuItem renderIcon={WorkflowAutomation} href="#">Monitoring</SideNavMenuItem>
+                  <SideNavMenuItem renderIcon={ServiceLevels} href="#">Service levels</SideNavMenuItem>
 
                   {/* Divider */}
                   <SideNavDivider />
@@ -196,6 +206,15 @@ function App() {
 
                   {/* Concert */}
                   <SideNavMenu renderIcon={IbmTurbonomic} title="Concert">
+                    <SideNavMenuItem renderIcon={HomeIcon} href="#">Home</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Arena view</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Dimensions</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Workflow</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Administration</SideNavMenuItem>
+                  </SideNavMenu>
+
+                  {/* Orchestrate */}
+                  <SideNavMenu renderIcon={IbmTurbonomic} title="watsonx Orchestrato">
                     <SideNavMenuItem renderIcon={HomeIcon} href="#">Home</SideNavMenuItem>
                     <SideNavMenuItem renderIcon={SquareOutline} href="#">Arena view</SideNavMenuItem>
                     <SideNavMenuItem renderIcon={SquareOutline} href="#">Dimensions</SideNavMenuItem>
