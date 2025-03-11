@@ -31,6 +31,7 @@ import {
 import { 
     Application,
     ChartMarimekko,
+    ChartRelationship,
     CloudLogging, 
     CloudMonitoring,
     Dashboard,
@@ -43,18 +44,26 @@ import {
     IbmInstana,
     IbmTurbonomic,
     IbmWatsonDiscovery,
+    Idea,
     InfrastructureClassic,
     Layers,
+    Location,
+    MeterAlt,
+    Plan, 
     Platforms,
     OverflowMenuVertical,
+    Search,
     Security,
     ServiceLevels,
     Settings,
+    ShapeIntersect,
     ShoppingCatalog,
     SquareOutline,
+    TableAlias,
     User,
     UserAccess,
-    WorkflowAutomation
+    WorkflowAutomation,
+    Analytics
   
   } from '@carbon/icons-react';
   
@@ -215,54 +224,90 @@ function App() {
                   {/* Turbonomic */}
                   <SideNavMenu renderIcon={() => <img src={TurbonomicIcon} alt="Instana" style={{ width: 20, height: 20 }} />}  title="Turbonomic">
                     <SideNavMenuItem renderIcon={HomeIcon} href="#">Home</SideNavMenuItem>
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Item</SideNavMenuItem>
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Item</SideNavMenuItem>
-                  </SideNavMenu>
+                    <SideNavMenuItem renderIcon={MeterAlt} href="#">Action Center</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={Search} href="#">Search</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={Plan} href="#">Plan</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={Location} href="#">Park</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={ShapeIntersect} href="#">Place</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={Dashboard} href="#">Dashboards</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={Analytics} href="#">Reports</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={Settings} href="#">Settings</SideNavMenuItem>
 
+                    <SideNavDivider />
+
+                    <SideNavMenuItem renderIcon={Idea} href="#">Submit idea</SideNavMenuItem>
+
+                    <SideNavMenu renderIcon={OverflowMenuVertical} title="Turbonomic support">
+                      <SideNavMenuItem href="#">User interface guide</SideNavMenuItem>
+                      <SideNavMenuItem href="#">Full documentation</SideNavMenuItem>
+                    </SideNavMenu> 
+                    
+                  </SideNavMenu>
+                    
                   {/* Concert */}
                   <SideNavMenu renderIcon={() => <img src={ConcertIcon} alt="Instana" style={{ width: 20, height: 20 }} />}  title="Concert">
                     <SideNavMenuItem renderIcon={HomeIcon} href="#">Home</SideNavMenuItem>
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Arena view</SideNavMenuItem>
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Dimensions</SideNavMenuItem>
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Workflow</SideNavMenuItem>
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Administration</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={ChartRelationship} href="#">Arena view</SideNavMenuItem>
+                    
+                    <SideNavMenu renderIcon={TableAlias} title="Dimensions">
+                      <SideNavMenuItem href="#">Risk</SideNavMenuItem>
+                      <SideNavMenuItem href="#">Resilience</SideNavMenuItem>
+                      <SideNavMenuItem href="#">Operations</SideNavMenuItem>
+                      <SideNavMenuItem href="#">Compliance</SideNavMenuItem>
+                      <SideNavMenuItem href="#">Security</SideNavMenuItem>
+                    </SideNavMenu> 
+
+                    <SideNavMenu renderIcon={Flow} title="Workflows">
+                      <SideNavMenuItem href="#">Workflow catalog</SideNavMenuItem>
+                      <SideNavMenuItem href="#">Editor</SideNavMenuItem>
+                      <SideNavMenuItem href="#">Connections</SideNavMenuItem>
+                      <SideNavMenuItem href="#">APIs</SideNavMenuItem>
+                      <SideNavMenuItem href="#">Keys</SideNavMenuItem>
+                    </SideNavMenu> 
+
+                    <SideNavMenu renderIcon={Settings} title="Administration">
+                      <SideNavMenuItem href="#">Users</SideNavMenuItem>
+                      <SideNavMenuItem href="#">API keys</SideNavMenuItem>
+                      <SideNavMenuItem href="#">Connections</SideNavMenuItem>
+                    </SideNavMenu> 
+
+                    
+
                   </SideNavMenu>
 
                   {/* Orchestrate */}
                   <SideNavMenu renderIcon={() => <img src={OrchestrateIcon} alt="Instana" style={{ width: 20, height: 20 }} />}  title="watsonx Orchestrato">
                     <SideNavMenuItem renderIcon={HomeIcon} href="#">Home</SideNavMenuItem>
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Arena view</SideNavMenuItem>
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Dimensions</SideNavMenuItem>
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Workflow</SideNavMenuItem>
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Administration</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Skills</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Workflows</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={Settings} href="#">Settings</SideNavMenuItem>
                   </SideNavMenu>
 
                   {/* Divider */}
                   <SideNavDivider />
+
+                  <SideNavMenu renderIcon={UserAccess} title="User & access management">
+                    <SideNavMenuItem href="#">Users</SideNavMenuItem>
+                    <SideNavMenuItem href="#">Groups</SideNavMenuItem>
+                    <SideNavMenuItem href="#">Access</SideNavMenuItem>
+                    <SideNavMenuItem href="#">Policies</SideNavMenuItem>
+                    <SideNavMenuItem href="#">Resource groups</SideNavMenuItem>
+                  </SideNavMenu>
                   
-                  <SideNavMenu renderIcon={SquareOutline} title="Sub-menu">
-                    <SideNavMenuItem href="#">Item</SideNavMenuItem>
-                  </SideNavMenu>
-                  <SideNavMenu renderIcon={SquareOutline} title="Sub-menu">
-                    <SideNavMenuItem href="#">Item</SideNavMenuItem>
-                  </SideNavMenu>
-                  <SideNavMenu renderIcon={SquareOutline} title="Sub-menu">
-                    <SideNavMenuItem href="#">Item</SideNavMenuItem>
-                  </SideNavMenu>
-                  <SideNavDivider />
-                  <SideNavLink renderIcon={SquareOutline} href="#">
-                    Link
-                  </SideNavLink>
-                  <SideNavLink renderIcon={SquareOutline} href="#">
-                    Link
-                  </SideNavLink>
-                  
-                  <SideNavMenu renderIcon={SquareOutline} title="Sub-menu">
+                  <SideNavMenu renderIcon={ShoppingCatalog} title="Software catalog">
                     <SideNavMenuItem href="#">My Item</SideNavMenuItem>
                     <SideNavMenuItem href="#">Item</SideNavMenuItem>
                     <SideNavMenuItem href="#">Item</SideNavMenuItem>
                   </SideNavMenu>
+
+                  <SideNavMenu renderIcon={Events} title="Community">
+                    <SideNavMenuItem href="#">Home</SideNavMenuItem>
+                    <SideNavMenuItem href="#">Instana community</SideNavMenuItem>
+                    <SideNavMenuItem href="#">Turbonomic community</SideNavMenuItem>
+                  </SideNavMenu>
+
                 </SideNavItems>
+
               </SideNav>
             </Theme>
 
@@ -277,13 +322,11 @@ function App() {
                 
                 <SideNavLink renderIcon={HomeIcon} href="#">Home</SideNavLink>
 
-                  // Data apps
                   <SideNavMenu renderIcon={ChartMarimekko} title="Data apps">
                     <SideNavMenuItem href="#">Apps</SideNavMenuItem>
                     <SideNavMenuItem href="#">App editor</SideNavMenuItem>
                   </SideNavMenu>
 
-                // Workflow
                   <SideNavMenu renderIcon={Flow} title="Workflows ">
                     <SideNavMenuItem href="#">Workflow catalog</SideNavMenuItem>
                     <SideNavMenuItem href="#">Workflow editor</SideNavMenuItem>
@@ -291,7 +334,6 @@ function App() {
                     <SideNavMenuItem href="#">Jobs</SideNavMenuItem>
                   </SideNavMenu>
 
-                  // IAM
                   <SideNavMenu renderIcon={UserAccess} title="User & access management">
                     <SideNavMenuItem href="#">Users</SideNavMenuItem>
                     <SideNavMenuItem href="#">Groups</SideNavMenuItem>
@@ -299,7 +341,6 @@ function App() {
                     <SideNavMenuItem href="#">Resource groups</SideNavMenuItem>
                   </SideNavMenu>
 
-                  // Community
                   <SideNavMenu renderIcon={Events} title="Community">
                     <SideNavMenuItem href="#">Community home</SideNavMenuItem>
                     <SideNavMenuItem href="#">My profile</SideNavMenuItem>
@@ -309,7 +350,6 @@ function App() {
                     <SideNavMenuItem href="#">Submit an idea</SideNavMenuItem>
                   </SideNavMenu>
 
-                 // Software catalog
                   <SideNavLink renderIcon={ShoppingCatalog} href="#">
                     Software catalog
                   </SideNavLink>
