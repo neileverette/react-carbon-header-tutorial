@@ -46,6 +46,7 @@ import {
     InfrastructureClassic,
     Layers,
     Platforms,
+    OverflowMenuVertical,
     Security,
     ServiceLevels,
     Settings,
@@ -56,6 +57,13 @@ import {
     WorkflowAutomation
   
   } from '@carbon/icons-react';
+  
+import InstanaIcon from './assets/ic-instana.svg';
+import TurbonomicIcon from './assets/ic-turbonomic.svg';
+import HubIcon from './assets/ic-dashboard.svg';
+import OrchestrateIcon from './assets/ic-orchestrate.svg';
+import ConcertIcon from './assets/ic-concert.svg';
+
 
 const StoryContent = () => (
   <Theme as={Content} theme="g10">
@@ -163,9 +171,11 @@ function App() {
                 
                 {/* Global menu */}
                 <SideNavItems>
-                  
+
+                <SideNavMenuItem renderIcon={() => <img src={HubIcon} alt="Instana" style={{ width: 20, height: 20 }} />} href="#">Home</SideNavMenuItem>
+
                   {/* Instana */}
-                  <SideNavMenu renderIcon={IbmInstana}title="Instana">
+                  <SideNavMenu renderIcon={() => <img src={InstanaIcon} alt="Instana" style={{ width: 20, height: 20 }} />}title="Instana">
                     <SideNavMenuItem renderIcon={HomeIcon} href="#">Home</SideNavMenuItem>
                     <SideNavMenuItem renderIcon={DevicesApps} href="#">Websites & applications</SideNavMenuItem>
                     <SideNavMenuItem renderIcon={CloudMonitoring} href="#">Business monitoring</SideNavMenuItem>
@@ -192,20 +202,25 @@ function App() {
                   {/* Divider */}
                   <SideNavDivider />
 
-                  <SideNavMenuItem renderIcon={SquareOutline} href="#">Settings</SideNavMenuItem>
-                  <SideNavMenuItem renderIcon={SquareOutline} href="#">More</SideNavMenuItem>
+                  <SideNavMenuItem renderIcon={Settings} href="#">Settings</SideNavMenuItem>
+                  <SideNavMenu renderIcon={OverflowMenuVertical} title="More">
+                      <SideNavMenuItem href="#">Release notes</SideNavMenuItem>
+                      <SideNavMenuItem href="#">Documentation</SideNavMenuItem>
+                      <SideNavMenuItem href="#">Support</SideNavMenuItem>
+                      <SideNavMenuItem href="#">About Instana</SideNavMenuItem>
+                    </SideNavMenu> 
 
                   </SideNavMenu>
                   
                   {/* Turbonomic */}
-                  <SideNavMenu renderIcon={IbmTurbonomic} title="Turbonomic">
+                  <SideNavMenu renderIcon={() => <img src={TurbonomicIcon} alt="Instana" style={{ width: 20, height: 20 }} />}  title="Turbonomic">
                     <SideNavMenuItem renderIcon={HomeIcon} href="#">Home</SideNavMenuItem>
                     <SideNavMenuItem renderIcon={SquareOutline} href="#">Item</SideNavMenuItem>
                     <SideNavMenuItem renderIcon={SquareOutline} href="#">Item</SideNavMenuItem>
                   </SideNavMenu>
 
                   {/* Concert */}
-                  <SideNavMenu renderIcon={IbmTurbonomic} title="Concert">
+                  <SideNavMenu renderIcon={() => <img src={ConcertIcon} alt="Instana" style={{ width: 20, height: 20 }} />}  title="Concert">
                     <SideNavMenuItem renderIcon={HomeIcon} href="#">Home</SideNavMenuItem>
                     <SideNavMenuItem renderIcon={SquareOutline} href="#">Arena view</SideNavMenuItem>
                     <SideNavMenuItem renderIcon={SquareOutline} href="#">Dimensions</SideNavMenuItem>
@@ -214,7 +229,7 @@ function App() {
                   </SideNavMenu>
 
                   {/* Orchestrate */}
-                  <SideNavMenu renderIcon={IbmTurbonomic} title="watsonx Orchestrato">
+                  <SideNavMenu renderIcon={() => <img src={OrchestrateIcon} alt="Instana" style={{ width: 20, height: 20 }} />}  title="watsonx Orchestrato">
                     <SideNavMenuItem renderIcon={HomeIcon} href="#">Home</SideNavMenuItem>
                     <SideNavMenuItem renderIcon={SquareOutline} href="#">Arena view</SideNavMenuItem>
                     <SideNavMenuItem renderIcon={SquareOutline} href="#">Dimensions</SideNavMenuItem>
