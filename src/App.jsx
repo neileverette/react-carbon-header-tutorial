@@ -48,6 +48,7 @@ import {
     InfrastructureClassic,
     Layers,
     Location,
+    MachineLearningModel,
     MeterAlt,
     Plan, 
     Platforms,
@@ -222,7 +223,7 @@ function App() {
                   </SideNavMenu>
                   
                   {/* Turbonomic */}
-                  <SideNavMenu renderIcon={() => <img src={TurbonomicIcon} alt="Instana" style={{ width: 20, height: 20 }} />}  title="Turbonomic">
+                  <SideNavMenu renderIcon={() => <img src={TurbonomicIcon} alt="Turbonomic" style={{ width: 20, height: 20 }} />}  title="Turbonomic">
                     <SideNavMenuItem renderIcon={HomeIcon} href="#">Home</SideNavMenuItem>
                     <SideNavMenuItem renderIcon={MeterAlt} href="#">Action Center</SideNavMenuItem>
                     <SideNavMenuItem renderIcon={Search} href="#">Search</SideNavMenuItem>
@@ -245,7 +246,7 @@ function App() {
                   </SideNavMenu>
                     
                   {/* Concert */}
-                  <SideNavMenu renderIcon={() => <img src={ConcertIcon} alt="Instana" style={{ width: 20, height: 20 }} />}  title="Concert">
+                  <SideNavMenu renderIcon={() => <img src={ConcertIcon} alt="Concert" style={{ width: 20, height: 20 }} />}  title="Concert">
                     <SideNavMenuItem renderIcon={HomeIcon} href="#">Home</SideNavMenuItem>
                     <SideNavMenuItem renderIcon={ChartRelationship} href="#">Arena view</SideNavMenuItem>
                     
@@ -276,10 +277,10 @@ function App() {
                   </SideNavMenu>
 
                   {/* Orchestrate */}
-                  <SideNavMenu renderIcon={() => <img src={OrchestrateIcon} alt="Instana" style={{ width: 20, height: 20 }} />}  title="watsonx Orchestrato">
+                  <SideNavMenu renderIcon={() => <img src={OrchestrateIcon} alt="Orchestrate" style={{ width: 20, height: 20 }} />}  title="watsonx Orchestrate">
                     <SideNavMenuItem renderIcon={HomeIcon} href="#">Home</SideNavMenuItem>
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Skills</SideNavMenuItem>
-                    <SideNavMenuItem renderIcon={SquareOutline} href="#">Workflows</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={MachineLearningModel} href="#">Skills</SideNavMenuItem>
+                    <SideNavMenuItem renderIcon={Flow} href="#">Workflows</SideNavMenuItem>
                     <SideNavMenuItem renderIcon={Settings} href="#">Settings</SideNavMenuItem>
                   </SideNavMenu>
 
@@ -295,9 +296,9 @@ function App() {
                   </SideNavMenu>
                   
                   <SideNavMenu renderIcon={ShoppingCatalog} title="Software catalog">
-                    <SideNavMenuItem href="#">My Item</SideNavMenuItem>
-                    <SideNavMenuItem href="#">Item</SideNavMenuItem>
-                    <SideNavMenuItem href="#">Item</SideNavMenuItem>
+                    <SideNavMenuItem href="#">Home</SideNavMenuItem>
+                    <SideNavMenuItem href="#">Solutions</SideNavMenuItem>
+                    <SideNavMenuItem href="#">My products</SideNavMenuItem>
                   </SideNavMenu>
 
                   <SideNavMenu renderIcon={Events} title="Community">
