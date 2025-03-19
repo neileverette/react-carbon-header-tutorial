@@ -7,6 +7,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+
 import React, { useState } from 'react';
 import {
   SIDE_NAV_TYPE,
@@ -182,7 +183,7 @@ function App() {
                 {/* Global menu */}
                 <SideNavItems>
 
-                <SideNavMenuItem renderIcon={() => <img src={HubIcon} alt="Instana" style={{ width: 20, height: 20 }} />} href="#">Home</SideNavMenuItem>
+                <SideNavMenuItem renderIcon={() => <img src={HubIcon} alt="Instana" style={{ width: 20, height: 20 }} />} href="#">Automation Hub</SideNavMenuItem>
 
                   {/* Instana */}
                   <SideNavMenu renderIcon={() => <img src={InstanaIcon} alt="Instana" style={{ width: 20, height: 20 }} />}title="Instana">
@@ -321,7 +322,7 @@ function App() {
                 aria-label="Side navigation">
                 <SideNavItems>
                 
-                <SideNavLink renderIcon={HomeIcon} href="#">Home</SideNavLink>
+                <SideNavLink renderIcon={HomeIcon} href=" {/* Link to new page*/}">Home</SideNavLink>
 
                   <SideNavMenu renderIcon={ChartMarimekko} title="Data apps">
                     <SideNavMenuItem href="#">Apps</SideNavMenuItem>
